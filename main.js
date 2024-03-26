@@ -40,7 +40,7 @@ try {
 }
 const { Low, JSONFile } = low
 const mongoDB = require('./lib/mongoDB')
-
+const { makeWASocket, protoType, serialize } = require('./lib/simple.js')
 const useStore = !process.argv.includes('--store')
 //const usePairingCode = process.argv.includes("--code") || process.argv.includes("--pairing")
 const usePairingCode =  true
@@ -98,54 +98,28 @@ const { version, isLatest } = await fetchLatestBaileysVersion()
 console.log(chalk.magenta(`-- using WA v${version.join('.')}, isLatest: ${isLatest} --`))
 
 const connectionOptions = {
-	printQRInTerminal: !usePairingCode,
-	syncFullHistory: true,
-	markOnlineOnConnect: true,
-	connectTimeoutMs: 60000, 
-	defaultQueryTimeoutMs: 0,
-	keepAliveIntervalMs: 10000,
-	generateHighQualityLinkPreview: true, 
-	patchMessageBeforeSending: (message) => {
-		const requiresPatch = !!(
-			message.buttonsMessage 
-			|| message.templateMessage
-			|| message.listMessage
-		);
-		if (requiresPatch) {
-			message = {
-				viewOnceMessage: {
-					message: {
-						messageContextInfo: {
-							deviceListMetadataVersion: 2,
-							deviceListMetadata: {},
-						},
-						...message,
-					},
-				},
-			};
-		}
-
-		return message;
-	},
-	version: (await (await fetch('https://raw.githubusercontent.com/WhiskeySockets/Baileys/master/src/Defaults/baileys-version.json')).json()).version,
-	browser: [ 'Ubuntu', 'Chrome', '20.0.04' ],
-	logger: pino({ level: 'fatal' }),
-	auth: { 
-		creds: state.creds, 
-		keys: makeCacheableSignalKeyStore(state.keys, pino().child({ 
-			level: 'silent', 
-			stream: 'store' 
-		})), 
-	},
+    version,
+    logger: pino({
+        level: 'silent'
+    }),
+    printQRInTerminal: false,
+    browser: [ 'Ubuntu', 'Chrome', '20.0.04' ],
+    auth: {
+        creds: state.creds,
+        keys: makeCacheableSignalKeyStore(state.keys, pino().child({
+            level: 'silent',
+            stream: 'store'
+        }))
+    }
 }
+
+global.conn = makeWASocket(connectionOptions)
+conn.isInit = false
 
 const getMessage = async key => {
 	const messageData = await store.loadMessage(key.remoteJid, key.id);
 	return messageData?.message || undefined;
 }
-
-global.conn = simple.makeWASocket(connectionOptions)
-conn.isInit = false
 // const store = makeInMemoryStore({ })
 // store.readFromFile('./baileys_store.json')
 // setInterval(() => { store.writeToFile('./baileys_store.json') }, 10_000) //nyalakan kalau mau di simpan database store nya dengan resiko ram cepat penuh. 
