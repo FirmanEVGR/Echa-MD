@@ -20,4 +20,4 @@ handler.tags = ['downloader']
 handler.command = /^(tiktok|tt|ttdl|tiktokdl|tiktoknowm)$/i
 handler.limit = true
 
-export default handler
+module.exports = handler
