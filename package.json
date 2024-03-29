@@ -1,7 +1,7 @@
 {
-    "name": "rtxzy",
+    "name": "Echa-MD",
     "version": "7.0.1",
-    "description": "Lightweight WhatsApp Bot",
+    "description": "",
     "depecrated": false,
     "main": "index.js",
     "directories": {
@@ -10,9 +10,9 @@
         "plugins": "plugins"
     },
     "scripts": {
-        "start": "node index.js --autocleartmp --autoread",
+        "start": "node index.js --autocleartmp",
         "test": "node test.js",
-        "test2": "nodemon index.js --server --autocleartmp --autoread"
+        "test2": "nodemon index.js --server --autocleartmp"
     },
     "keywords": [
         "whatsapp-bot-md",
@@ -26,16 +26,16 @@
         "botcahx",
         "baileys"
     ],
-    "homepage": "https://github.com/BOTCAHX/RTXZY-MD",
+    "homepage": "https://github.com/FirmanEVGR/Echa-MD",
     "author": {
-        "name": "BOTCAHX"
+        "name": "Firmann"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BOTCAHX/RTXZY-MD.git"
+        "url": "git+https://github.com/FirmanEVGR/Echa-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/BOTCAHX/RTXZY-MD/issues"
+        "url": "https://github.com/BOTCAHX/FirmanEVGR/issues"
     },
     "license": "MIT",
     "dependencies": {
