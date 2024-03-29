@@ -7,7 +7,7 @@ let urlTiktokRegex = /(https?:\/\/[^\s]*tiktok\.com[^\s]*)/g;
 var budy = (typeof m.text == 'string' ? m.text : '')
 if(!isCmd && budy.match(urlTiktokRegex)){
 let res = budy.match(urlTiktokRegex)[0]
-m.reply(mess.wait)
+await m.react('⏱️')
 let anu = await tiktok(res)
 let capt = `*Username :* ${anu.author}
 *Deskripsi :* ${anu.desc}`
