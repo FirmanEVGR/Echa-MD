@@ -11,11 +11,12 @@ await m.react('⏱️')
 let anu = await tiktok(res)
 let capt = `*Username :* ${anu.author}
 *Deskripsi :* ${anu.desc}`
-await conn.sendFile(m.chat, anu.video, "", capt, m)
-await conn.sendMessage(m.chat, {
+await conn.sendFile(m.sender, anu.video, "", capt, m)
+await conn.sendMessage(m.sender, {
 audio: { url: anu.audio },
 mimetype: "audio/mpeg"
 },{ quoted: null })
+if (m.isGroup) await m.reply('> ⓘ _Video berhasil dikirim ke private chat._')
 }
 }
 
