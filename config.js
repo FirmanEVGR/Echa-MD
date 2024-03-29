@@ -3,35 +3,29 @@ global.mods = ['6283861518933']
 global.prems = ['6283861518933']
 global.nameowner = 'Firmann'
 global.numberowner = '6283861518933' 
-global.mail = 'nijikaijichii@gmail.com' 
-global.gc = 'https://chat.whatsapp.com/GPykFqHeemW0hWVl1UXQTa'
+global.mail = 'firmansenseiii@gmail.com' 
+global.gc = 'https://chat.whatsapp.com/KNJ3aI2DqFw7m1sJDH8Z6t'
 global.instagram = 'https://instagram.com'
 global.wm = '𝐄𝐜𝐡𝐚 ✘ '
-global.wait = '_*Tunggu sedang di proses...*_'
+global.wait = '_*Tunggu, sedang di proses ...*_'
 global.eror = '_*Server Error*_'
-global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
+global.stiker_wait = global.wait
 global.packname = 'Hi'
 global.author = 'Echa'
-global.autobio = false // Set true untuk mengaktifkan autobio
-global.maxwarn = '2' // Peringatan maksimum
-
-//INI WAJIB DI ISI!//
+global.autobio = false
+global.maxwarn = '2'
 global.btc = 'Mark-HDR' 
-//Daftar terlebih dahulu https://api.botcahx.eu.org
-
-//INI OPTIONAL BOLEH DI ISI BOLEH JUGA ENGGA//
 global.lann = 'YOUR_APIKEY_HERE'
-//Daftar https://api.betabotz.eu.org 
 
 global.APIs = {   
   btc: 'https://api.botcahx.eu.org'
 }
 global.APIKeys = { 
-  'https://api.botcahx.eu.org': 'Mark-HDR' 
+  'https://api.botcahx.eu.org': 'Mark-HDR'
 }
 
 global.mess = {
-  wait: '_Tunggu, sedang diproses ..._',
+  wait: '_*Tunggu, sedang diproses ...*_',
   done: '*DONE ✅*',
   error: '*_Error 404!!?!_*',
   url: '*Link nya mana kak?*'
