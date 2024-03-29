@@ -8,6 +8,7 @@ var budy = (typeof m.text == 'string' ? m.text : '')
 if(!isCmd && budy.match(urlTiktokRegex)){
 let res = budy.match(urlTiktokRegex)[0]
 await m.react('⏱️')
+if (m.isGroup) return await m.reply('Video berhasil dikirim ke private chat!')
 let anu = await tiktok(res)
 let capt = `*Username :* ${anu.author}
 *Deskripsi :* ${anu.desc}`
