@@ -426,6 +426,8 @@ if (!('delete' in chat)) chat.delete = true
 if (!('antiLink' in chat)) chat.antiLink = true
 if (!('viewonce' in chat)) chat.viewonce = false
 if (!('antiToxic' in chat)) chat.antiToxic = false
+if (!('listStr' in chat))
+chat.listStr = {}
 } else global.db.data.chats[m.chat] = {
 isBanned: false,
 welcome: true,
@@ -438,6 +440,7 @@ delete: true,
 antiLink: false,
 viewonce: false,
 antiToxic: true,
+listStr: {},
 }
 } catch (e) {
 console.error(e)
