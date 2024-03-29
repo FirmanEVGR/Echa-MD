@@ -31,7 +31,7 @@ async function startServer() {
       const data = {
         status: 'true',
         message: 'Bot Successfully Activated!',
-        author: 'BOTCAHX'
+        author: 'Firmann'
       };
       const result = {
         response: data
@@ -110,8 +110,8 @@ function start(file) {
     }
     console.log('\x1b[33m%s\x1b[0m', `🟡 Found ${files.length} plugins in folder ${pluginsFolder}`);
     try {
-      require.resolve('@adiwajshing/baileys');
-      console.log('\x1b[33m%s\x1b[0m', `🟡 Baileys library version ${require('@adiwajshing/baileys/package.json').version} is installed`);
+      require.resolve('@whiskeysockets/baileys');
+      console.log('\x1b[33m%s\x1b[0m', `🟡 Baileys library version ${require('@whiskeysockets/baileys/package.json').version} is installed`);
     } catch (e) {
       console.error('\x1b[31m%s\x1b[0m', `❌ Baileys library is not installed`);
     }
