@@ -58,7 +58,7 @@ timestamp = {
 const PORT = process.env.PORT || 3000
 
 opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-prefix = new RegExp('^[' + (opts['prefix'] || 'â€ŽxzXZ/i!#$%+Â£Â¢â‚¬Â¥^Â°=Â¶âˆ†Ã—Ã·Ï€âˆšâœ“Â©Â®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+prefix = new RegExp('^[' + (opts['prefix'] || '\/!#.\\').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
