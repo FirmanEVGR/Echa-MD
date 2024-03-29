@@ -16,14 +16,8 @@ await conn.sendMessage(m.sender, {
 audio: { url: anu.audio },
 mimetype: "audio/mpeg"
 },{ quoted: qu })
+await m.react('✅')
 }
 }
 
 module.exports = handler
-
-/*
-Plugins by 𝐅𝐢𝐫𝐦𝐚𝐧𝐗𝐃
-
-Jangan hapus
-Mikir udah gede, jangan cuman numpang nama doang wkwk
-*/
