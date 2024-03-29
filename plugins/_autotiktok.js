@@ -16,7 +16,6 @@ await conn.sendMessage(m.chat, {
 audio: { url: anu.audio },
 mimetype: "audio/mpeg"
 },{ quoted: null })
-await m.react('✅')
 }
 }
 
