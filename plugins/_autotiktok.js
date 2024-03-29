@@ -16,7 +16,7 @@ await conn.sendMessage(m.sender, {
 audio: { url: anu.audio },
 mimetype: "audio/mpeg"
 },{ quoted: null })
-if (m.isGroup) await m.reply('> ⓘ _Video berhasil dikirim ke private chat._')
+if (m.isGroup) await m.reply('> ⓘ _Video berhasil dikirim ke private chat_')
 }
 }
 
