@@ -20,7 +20,7 @@ if (m.isGroup) await m.reply('> ⓘ _Video berhasil dikirim ke private chat_')
 await m.react('✅')
 setTimeout(async function(){
 await m.react('')
-}, 50000)
+}, 5000)
 }
 }
 
