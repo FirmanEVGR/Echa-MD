@@ -15,6 +15,9 @@ mimetype: "audio/mpeg"
 },{ quoted: null })
 if (m.isGroup) m.reply('> ⓘ _Video berhasil dikirim ke private chat_')
 await m.react('✅')
+setTimeout(async function(){
+await m.react('')
+}, 50000)
 }
 handler.help = ['tiktok', 'tt'].map(v => v + ' <url>')
 handler.tags = ['downloader']
