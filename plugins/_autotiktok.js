@@ -17,6 +17,7 @@ audio: { url: anu.audio },
 mimetype: "audio/mpeg"
 },{ quoted: null })
 if (m.isGroup) await m.reply('> ⓘ _Video berhasil dikirim ke private chat_')
+await m.react('✅')
 }
 }
 
