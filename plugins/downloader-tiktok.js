@@ -14,6 +14,7 @@ url: anu.audio
 mimetype: "audio/mpeg"
 },{ quoted: null })
 if (m.isGroup) m.reply('> ⓘ _Video berhasil dikirim ke private chat_')
+await m.react('✅')
 }
 handler.help = ['tiktok', 'tt'].map(v => v + ' <url>')
 handler.tags = ['downloader']
