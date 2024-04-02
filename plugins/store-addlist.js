@@ -3,9 +3,8 @@ const { proto } = require('@whiskeysockets/baileys');
 let handler = async (m, { conn, text, command, usedPrefix }) => {
   let M = proto.WebMessageInfo;
   if (!m.quoted) throw `balas pesan dengan perintah *${usedPrefix + command}*`;
-  if (!text) throw `penggunaan: ${usedPrefix + command} <teks>\n\ncontoh:\n${usedPrefix + command} tes`;
-  
-  let msgs = db.data.chats[m.chat].listStr;
+  if (!text) throw `*🚩 Contoh penggunaan:*\n${usedPrefix+command} Test`;
+    let msgs = db.data.chats[m.chat].listStr;
   if (text.toUpperCase() in msgs) throw `'${text}' telah terdaftar di List store`;
   
   msgs[text.toUpperCase()] = M.fromObject(await m.getQuotedObj()).toJSON();
