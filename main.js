@@ -64,8 +64,8 @@ prefix = new RegExp('^[' + (opts['prefix'] || '\/!#.\\').replace(/[|\\{}()[\]^$+
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb/i.test(opts['db']) ?
       new mongoDB(opts['db']) :
-      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)*/
-)
+      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
+)*/
 
 db = new Low(new mongoDB('mongodb+srv://ifirmanloid2:zCWqva85eM9IP5Pq@cluster0.fwoxpx9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
 
