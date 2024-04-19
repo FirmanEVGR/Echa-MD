@@ -60,14 +60,14 @@ const PORT = process.env.PORT || 3000
 opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 prefix = new RegExp('^[' + (opts['prefix'] || '\/!#.\\').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
-db = new Low(
+/*db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb/i.test(opts['db']) ?
       new mongoDB(opts['db']) :
-      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
+      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)*/
 )
 
-//db = new Low(new mongoDB('mongodb+srv://Aine99:kuku4040@cluster0.3o49pmt.mongodb.net/?retryWrites=true&w=majority'))
+db = new Low(new mongoDB('mongodb+srv://ifirmanloid2:zCWqva85eM9IP5Pq@cluster0.fwoxpx9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
 
 DATABASE = db // Backwards Compatibility
 loadDatabase = async function loadDatabase() {
