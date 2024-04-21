@@ -191,7 +191,7 @@ renderLargerThumbnail: true
 			if(useMobile) throw new Error('Cannot use pairing code with mobile api')
 			const { registration } = { registration: {} }
 			let phoneNumber = global.nomorbot
-			phoneNumber = phoneNumber.replace(/\D/g,'')
+			//phoneNumber = phoneNumber.replace(/\D/g,'')
 			console.log(chalk.bgWhite(chalk.blue('-- Tunggu Sebentar, Sedang Membuat Kode... --')))
 			setTimeout(async () => {
 					let code = await conn.requestPairingCode(phoneNumber)
