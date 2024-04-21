@@ -190,11 +190,7 @@ renderLargerThumbnail: true
 	 if(usePairingCode && !conn.authState.creds.registered) {
 			if(useMobile) throw new Error('Cannot use pairing code with mobile api')
 			const { registration } = { registration: {} }
-			let phoneNumber = ''
-			do {
-					phoneNumber = await question(chalk.blueBright('KETIK NOMOR ANDA SESUAI KODE NEGARA ANDA. Example : 62xxx:\n'))
-			} while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
-			rl.close()
+			let phoneNumber = global.nomorbot
 			phoneNumber = phoneNumber.replace(/\D/g,'')
 			console.log(chalk.bgWhite(chalk.blue('-- Tunggu Sebentar, Sedang Membuat Kode... --')))
 			setTimeout(async () => {
