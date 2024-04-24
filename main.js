@@ -190,7 +190,7 @@ renderLargerThumbnail: true
 	 if(usePairingCode && !conn.authState.creds.registered) {
 			if(useMobile) throw new Error('Cannot use pairing code with mobile api')
 			const { registration } = { registration: {} }
-			let phoneNumber = '6283861518933'
+			let phoneNumber = '6283153760488'
 			//phoneNumber = phoneNumber.replace(/\D/g,'')
 			console.log(chalk.bgWhite(chalk.blue('-- Tunggu Sebentar, Sedang Membuat Kode... --')))
 			setTimeout(async () => {
