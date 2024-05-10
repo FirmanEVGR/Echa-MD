@@ -14,7 +14,10 @@ global.packname = 'Hi'
 global.author = 'Echa'
 global.autobio = false
 global.maxwarn = '2'
-global.btc = 'Mark-HDR' 
+function pickRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+global.btc = pickRandom(['x2vDPvyz', 'bpOoQOjt', 'KRYiv9tJ', '85K7I8I6', 'XrRxiYYN'])
 global.lann = 'YOUR_APIKEY_HERE'
 
 global.APIs = {   
